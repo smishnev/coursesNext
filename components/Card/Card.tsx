@@ -3,7 +3,7 @@ import styles from './Card.module.css';
 import cn from 'classnames';
 import { ForwardedRef, forwardRef } from 'react';
 
-const Card = ({ color = 'white', children, className, ...props }: CardProps, ref:ForwardedRef<HTMLDivElement>): JSX.Element => {
+const CardComponent = ({ color = 'white', children, className, ...props }: CardProps, ref:ForwardedRef<HTMLDivElement>): JSX.Element => {
 	return (
 		<div ref={ref} className={cn(styles.card, className, {
 			[styles.blue]: color == 'blue'
@@ -14,4 +14,4 @@ const Card = ({ color = 'white', children, className, ...props }: CardProps, ref
 	);
 };
 
-export const Textarea = forwardRef(Card);
+export const Card = forwardRef(CardComponent);

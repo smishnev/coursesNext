@@ -12,7 +12,7 @@ import { ForwardedRef, forwardRef, useRef, useState } from 'react';
 import { Review } from '../Review/Review';
 import { ReviewForm } from '../ReviewForm/ReviewForm';
 
-export const Product = ({ product, className, ...props }: ProductProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
+const ProductComponent = ({ product, className, ...props }: ProductProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
 	const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);
 	
 	const reviewRef = useRef<HTMLDivElement>(null);
@@ -110,3 +110,5 @@ export const Product = ({ product, className, ...props }: ProductProps, ref: For
 		</div>
 	);
 };
+
+export const Product = forwardRef(ProductComponent);
