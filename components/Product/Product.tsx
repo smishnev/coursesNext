@@ -98,16 +98,22 @@ const ProductComponent = ({ product, className, ...props }: ProductProps, ref: F
 						aria-expanded={isReviewOpened}
 					>Читать отзывы</Button>
 				</div>
-			</Card>			
-			<Card color='blue' className={styles.reviews} ref={reviewRef}>
-				{product.reviews.map(r => (
-					<div key={r._id}>
-						<Review review={r} />
-						<Divider />
-					</div>
-				))}
-				<ReviewForm productId={product._id} isOpened={isReviewOpened} />
 			</Card>
+			<motion.div
+				animate={isReviewOpened ? 'visible' : 'hidden'}
+				variants={variants}
+				initial='hidden'
+			>
+				<Card color='blue' className={styles.reviews} ref={reviewRef}>
+					{product.reviews.map(r => (
+						<div key={r._id}>
+							<Review review={r} />
+							<Divider />
+						</div>
+					))}
+					<ReviewForm productId={product._id} isOpened={isReviewOpened} />
+				</Card>
+			</motion.div>	
 		</div>
 	);
 };
