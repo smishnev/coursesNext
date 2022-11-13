@@ -56,22 +56,16 @@
 
 .secondLevelBlock {
 	overflow: hidden;
-
 	padding: 0;
-
 	list-style: none;
 }
 
 .thirdLevel {
 	display: block;
-
 	margin-bottom: 10px;
-
 	cursor: pointer;
-
 	color: var(--gray-dark);
 	outline-offset: -1px;
-
 	font-size: 14px;
 	font-weight: 500;
 }
