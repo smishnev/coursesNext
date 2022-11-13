@@ -6,6 +6,7 @@ import React, { FunctionComponent, useState, KeyboardEvent, useRef } from 'react
 import { Sidebar } from './Sidebar/Sidebar';
 import { Footer } from './Footer/Footer';
 import { AppContextProvider, IAppContext } from '../context/app.context';
+import { Up } from '../components'
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
 	const [isSkipLinkDisplayed, setIsSkipLinkDisplayed] = useState<boolean>(false);
@@ -34,7 +35,8 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
 			<main className={styles.body} ref={bodyRef} tabIndex={0} role='main'>
 				{children}
 			</main>
-			<Footer className={styles.footer} /> 
+			<Footer className={styles.footer} />
+			<Up />
 		</div>
 	);
 };
