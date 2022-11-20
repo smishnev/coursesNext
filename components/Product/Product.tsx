@@ -104,7 +104,7 @@ const ProductComponent = ({ product, className, ...props }: ProductProps, ref: F
 				variants={variants}
 				initial='hidden'
 			>
-				<Card color='blue' className={styles.reviews} ref={reviewRef}>
+				<Card color='blue' className={styles.reviews} ref={reviewRef} tabIndex={isReviewOpened ? 0 : -1}>
 					{product.reviews.map(r => (
 						<div key={r._id}>
 							<Review review={r} />

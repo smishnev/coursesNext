@@ -30,7 +30,6 @@
 .secondLevel {
 	margin-bottom: 15px;
 	padding: 0;
-	line-height: 1;
 
 	cursor: pointer;
 	text-transform: uppercase;
@@ -64,7 +63,6 @@
 
 .thirdLevel {
 	display: block;
-	line-height: 1;
 	margin-bottom: 0;
 	cursor: pointer;
 	color: var(--gray-dark);
