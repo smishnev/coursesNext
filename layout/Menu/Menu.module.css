@@ -28,8 +28,9 @@
 }
 
 .secondLevel {
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 	padding: 0;
+	line-height: 1;
 
 	cursor: pointer;
 	text-transform: uppercase;
@@ -58,11 +59,13 @@
 	overflow: hidden;
 	padding: 0;
 	list-style: none;
+	margin-left: 5px;
 }
 
 .thirdLevel {
 	display: block;
-	margin-bottom: 10px;
+	line-height: 1;
+	margin-bottom: 0;
 	cursor: pointer;
 	color: var(--gray-dark);
 	outline-offset: -1px;

@@ -26,9 +26,11 @@ export const Menu = (): JSX.Element => {
 	const variantsChildren = {
 		visible: {
 			opacity: 1,
-			height: 29
+			minHeight: 14,
+			height: 'auto',
+			marginBottom: 10,
 		},
-		hidden: { opacity: 0, height: 0 }
+		hidden: { opacity: 0, height: 0, minHeight:0, marginBottom: 0,}
 	};
 
 	const openSecondLevel = (secondCategory: string) => {
