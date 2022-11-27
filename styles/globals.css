@@ -2,10 +2,8 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-
 	color: var(--black);
 	background: #F5F6F8;
-
 	font-family: "Noto Sans KR", sans-serif;
 }
 
@@ -21,9 +19,7 @@ a {
 
 .visualyHidden {
 	position: absolute;
-
 	overflow: hidden;
-
 	width: 0;
 	height: 0;
 }
